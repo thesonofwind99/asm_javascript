@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+          </style>
+        <link rel="stylesheet"
+            href="fontawesome-free-6.2.1-web/css/all.min.css">
+        <link rel="stylesheet" href="all.css">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            var manghinh = [];
+            var item=1;
+             function nap (){
+        for(var i=1; i<5; i++){
+            manghinh[i]="url(hinh/dogd"+i+".jpeg)";
+        }
+        }
+        setInterval(next, 3000);
+        function back(){
+            item--;
+            if(item == 0){
+                item = 4;
+            }
+            document.getElementById("banner").style.backgroundImage=manghinh[item];
+        }
+            function next(){
+                item++;
+                if(item==5){
+                    item=1;
+                }
+                document.getElementById("banner").style.backgroundImage=manghinh[item];
+            }
+        </script>
+        <title>Trang bán hàng</title>
+    </head>
+    <body onload="nap()">
+        <header>
+            <div class="inner-header container">
+                <a href="" id="logo">XIGONNEW</a>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="index.html">Trang chủ</a>
+                            <ul>
+                                <li><a href="#">Flash sale</a></li>
+                                <li><a href="#">Mua nhiều nhất</a></li>
+                                <li><a href="#">Free ship</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="introduction.html">Giới thiệu</a></li>
+                        <li><a href="#">Sản phẩm</a>
+                            <ul>
+                                <li><a href="#">Kệ để chén</a></li>
+                                <li><a href="#">Tủ lạnh</a></li>
+                                <li><a href="#">Máy giặt</a></li>
+                                <li><a href="#">Nồi chiên không dầu</a></li>
+                                <li><a href="#">Ấm đun nước</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Góp ý</a></li>
+                        <li><a href="#">Liên hệ</a>
+                            <ul>
+                                <li><a href="#">Điện thoại</a></li>
+                                <li><a href="#">Email</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="subscribe.html"><i class="fa-solid
+                                    fa-user"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="giohang.html"><i class="fa-solid
+                                    fa-cart-shopping"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="banner">
+            <div class="container">
+                <div id="chamngon1">
+                    <h1>XIGONNEW</h1>
+                </div>
+                <div id="chamngon2">
+                    <h3>Uy tín - Hiện đại - Tiện nghi</h3>
+                </div>
+            </div>
+            <div onclick="back()" id="left">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div onclick="next()" id="right">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="container informa1">
+            <h2>SẢN PHẨM MỚI</h2>
+        </div>
+        <article class="container2">
+            <div class="list_items">
+                <div class="column">
+                    <div class="sanpham">
+                        <div class="icon"><img src="hinh/zyro-image.png" alt=""></div>
+                        <div class="ten">Ấm đun nước</div>
+                        <img src="hinh/amnuoc.jpg" alt="">
+                        <div class="giakhongdoi">
+                            <div class="giadoi">
+                                
+                                <del>199,000 VND</del><br>
+                                150,000 VND
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <a href="product1.html" >
+                    <div class="sanpham">
+                        <div class="ten">Bộ ấm chén cao cấp</div>
+                        <img src="hinh/boamchen.jpg" alt="">
+                        <div class="giakhongdoi">
+                            <div style="font-size: larger;
+                                font-weight: bolder;">
+                                
+                                230,000 VND
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="column">
+                    <div class="sanpham">
+                        <div class="icon"><img src="hinh/zyro-image.png" alt=""></div>
+                        <div class="ten">Bộ đũa tiệt trùng</div>
+                        <img src="hinh/bodua.jpg" alt="">
+                        <div class="giakhongdoi">
+                            <div class="giadoi">
+                                
+                                <del>50,000 VND</del><br>
+                                35,000 VND
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="sanpham">
+                        <div class="icon"><img src="hinh/zyro-image.png" alt=""></div>
+                        <div class="ten">Chén màu lục</div>
+                        <img src="hinh/chen.jpg" alt="">
+                        <div class="giakhongdoi">
+                            <div class="giadoi">
+                                
+                                <del>10,000 VND</del><br>
+                                6,000 VND
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container informa2">
+                <h2>SẢN PHẨM BÁN CHẠY</h2>
+            </div>
+            <div class="column">
+                <a href="product.html">
+                    <div class="sanpham">
+                        <div class="icon"><img src="hinh/zyro-image.png" alt=""></div>
+                        <div class="ten" style="color: black;">Chổi thông minh</div>
+                        <img src="hinh/choithongminh.jpg" alt="">
+                        <div class="giakhongdoi">
+                            <div class="giadoi">
+                                <del>120,500 VND</del><br>
+                                100,500 VND
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <div class="sanpham">
+                    <div class="icon"><img src="hinh//zyro-image.png" alt=""></div>
+                    <div class="ten">Kệ để chén, đĩa</div>
+                    <img src="hinh/kedechen.jpg" alt="">
+                    <div class="giakhongdoi">
+                        <div class="giadoi">
+                            
+                            <del>150,000 VND</del><br>
+                            99,000 VND
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="sanpham">
+                    <div class="ten">Nồi chiên không dầu</div>
+                    <img src="hinh/noichienkhongdau.jpg" alt="">
+                    <div class="giakhongdoi">
+                        <div style="font-size: larger;
+                            font-weight: bolder;">
+                            
+                            1,600,000 VND
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="sanpham">
+                    <div class="icon"><img src="hinh/zyro-image.png" alt=""></div>
+                    <div class="ten">Quạt điện</div>
+                    <img src="hinh/quatdien.jpg" alt="">
+                    <div class="giakhongdoi">
+                        <div class="giadoi">
+                            
+                            <del>450,000 VND</del><br>
+                            350,000 VND
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div id="container">
+                <div class="introduction">
+                    <h3>Giới thiệu :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Shop đồ gia dụng chuyên bán những sản phẩm gia dụng
+                    </p>
+                    <br>
+                    <h3>Địa chỉ :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Đường số 4, Bình Hưng Hoà B, Bình Tân, thành phố Hồ Chí
+                        Minh
+                    </p>
+                    <ul class="social">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    </ul>
+                    </div>
+                    <div class="link">
+                        <h3>Đường dẫn :</h3>
+                        <ul>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="introduction.html">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin liên lạc</a></li>
+                            <li><a href="#">Dịch vụ</a></li>
+                            <li><a href="#">Điều kiện chính sách</a></li>
+                        </ul>
+                    </div>
+                    <div class="lh">
+                        <h3>Thông tin liên hệ</h3>
+                        <ul>
+                            <li>
+                                <span><i class="fa-solid fa-phone"></i> Số điện
+                                    thoại:</span>
+                                <span>
+                                    <li><a href="#">+ 844340821</a></li>
+                                    <li><a href="#">+ 849353520</a></li>
+
+                                </span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-envelope"></i>
+                                    Email:</span>
+                                <span>
+                                    nhandtps36231@fpt.edu.vn
+                                </span>
+                            </li>
+                            <li>
+                                <form action="">
+                                    <input type="email" class="email"
+                                        placeholder="Đăng ký bằng email tại đây">
+                                         <br>
+                                    <input type="button" class="send"
+                                        value="Gửi">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </body>
+    </html>

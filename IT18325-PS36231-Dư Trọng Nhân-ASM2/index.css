@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.inner-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container2{
+    margin: 0 auto;
+    max-width: 1260px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 960px;
+}
+ul#main-menu{
+    display: flex;
+}
+ul#main-menu a{
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    display: block;
+}
+#logo{
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    display: block;
+}
+header{
+    z-index: 2;
+    background-color: brown;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+#chamngon1{
+    text-shadow: 5px 5px rgb(180, 180, 180);
+    letter-spacing: 2px;
+    position: absolute;
+    left: 370px;
+    bottom: 260px;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 3px;
+    padding-right: 45px;
+    padding-bottom: 12px;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+}
+#chamngon2{
+    position: absolute;
+    color: white;
+    bottom: 230px;
+    left: 713px;
+    border-bottom:  solid white 2px;
+    padding-right: 12px;
+    font-weight: bold;
+}
+#banner{
+    margin: 0 auto;
+    padding-top: 67px;
+    position: relative;
+    background-image: url(hinh/dogd1.jpeg);
+    min-height: 550px;
+    min-width: 100%;
+    background-size: cover;
+}
+#left{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: black;
+    opacity: 0.4;    
+}
+#right{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color:black;
+    opacity: 0.4; 
+}
+#left:hover{
+    transition: 0.15s;
+    transform: translateX(-10px);
+    opacity: 1;
+}
+#right:hover{
+    transition: 0.15s;
+    transform: translateX(10px);
+    opacity: 1;
+}
+#left>i{
+    font-size: 30px;
+    padding: 10px;
+}
+#right>i{
+    font-size: 30px;
+    padding: 10px;
+}
+.column{
+    max-width: 25%;
+    float: left;
+}
+.sanpham{
+    font-size: 16px;
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+    margin: 50px 20px;
+    text-align: center; 
+}
+.icon{
+    position: absolute;
+    right:0px;
+    top:0px;
+}
+img{
+    max-width: 100%;
+}
+.giadoi{
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+}
+del{
+    color: gray;
+}
+.giakhongdoi{
+    color:black;
+}
+.sanpham:hover{
+    transition: 0.15s;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 8px rgba(27, 20, 20, 0.493) ;
+}
+.ten{
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+article{
+    padding: 0 50px;
+}
+footer{
+    padding: 15px 0;
+    font-size: 14px;
+    background-color: rgb(13, 13, 73);
+    clear: both;
+    color: white;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+footer #container h3{
+    border-bottom:  solid white 1px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+}
+.social{
+    display: flex;
+}
+.social a{
+    border-radius: 35px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border: 2px solid gray;
+    background-color: gray;
+    display: flex;
+    margin: 0 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.link a{
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 2px 0;
+}
+.lh a{
+    color: white;
+    display: block;
+    font-size: 14px;
+    padding: 2px 0;
+}
+.send{
+    margin-top: 5px;
+    padding: 5px 10px ;
+    font-size: 15px;
+}
+.lh>ul>li{
+    margin: 10px 0;
+}
+.informa1{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(32, 10, 122);
+    width: 100%;
+}
+.informa1 h2{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.informa2{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: chocolate;
+    width: 100%;
+}
+.informa2 h2{
+    font-size: 40px;
+    color: rgb(236, 196, 87);
+    text-align: center;
+    align-items: center;
+}
+.list-items{
+    max-height: 500px;
+    background-color: white;
+}
+.column a{
+    color: black;
+}

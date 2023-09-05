@@ -1,0 +1,33 @@
+header>.inner-header>nav>#main-menu>li{
+    position: relative;
+}
+header>.inner-header>nav>#main-menu>li>ul{
+    position:absolute;
+    display: none;
+    list-style: none;
+}
+header>.inner-header>nav>#main-menu>li:hover>ul{
+    
+    display: block;
+}
+header>.inner-header>nav>#main-menu>li>ul>li>a{
+    background-color: brown;
+    width: 150px;
+}
+header>.inner-header>nav>#main-menu>li>ul>li>a:hover{
+    background-color: rgb(13, 13, 73);
+    color: white;
+}
+.social a:hover{
+    background-color: black;
+    border: 2px solid black;
+}
+.lh a:hover{
+    color: gray;
+}
+.link a:hover{
+    color:gray;
+}
+nav>#main-menu>li>a:hover{
+    color:rgb(13, 13, 73);
+}

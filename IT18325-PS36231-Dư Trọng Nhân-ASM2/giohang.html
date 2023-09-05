@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="giohang.css">
+    <script>
+        var mang = [
+            {   
+                hinh: "hinh/amnuoc.jpg",
+                ten: "ẤM NƯỚC",
+                gia: 150000,
+                soluong:2
+            },
+            {   
+                hinh: "hinh/boamchen.jpg",
+                ten: "BỘ ẤM CHÉN",
+                gia: 230000,
+                soluong: 3
+            },
+            {   
+                hinh: "hinh/choithongminh.jpg",
+                ten: "CHỔI THÔNG MINH",
+                gia: 105000,
+                soluong: 1
+            },
+            {   
+                hinh: "hinh/chen.jpg",
+                ten: "CHÉN MÀU LỤC",
+                gia: 6000,
+                soluong: 2
+            },
+            {   
+                hinh: "hinh/quatdien.jpg",
+                ten: "QUẠT ĐIỆN",
+                gia: 350000,
+                soluong: 3
+            },
+            {   
+                hinh: "hinh/kedechen.jpg",
+                ten: "KỆ ĐỂ CHÉN, ĐĨA",
+                gia: 99000,
+                soluong: 2
+            }
+        ];
+        function nap(){
+           var table= document.getElementById("table");
+           table.innerHTML="";
+           for(var i=0;i<mang.length;i++){
+            var row=document.createElement("tr");
+            table.appendChild(row);
+            var mot = mang[i];
+            row.innerHTML=`
+            <td class="td0"><img src="${mot.hinh}" alt=""></td>
+                <td class="td1">
+                    <h3>${mot.ten}</h3>
+                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                </td>
+                <td class="price td2">
+                    ${mot.gia}
+                </td>
+                <td class="price td3">
+                    <input type="number" min="1" max="10" value="${mot.soluong}"
+                    onchange="soluongmoi(${i}, this.value)">
+                </td>
+                <td class="td5" style="width: 250px; text-align: center;">
+                    ${mot.gia*mot.soluong}
+                </td>
+                <td class="price td4">
+                    <div><i class="fa-solid fa-xmark" onclick="xoa(${i})" ></i></div>
+                </td>
+            `;
+            tongtien()
+           }
+        }
+        function soluongmoi(item, value){
+            mang[item].soluong=value;
+            nap();
+        }
+        function xoa(item){
+            mang.splice(item, 1);
+            nap();
+            tongtien();
+        }
+        function tongtien(){
+            var tong=0;
+            for(var i=0;i<mang.length;i++){
+              var tien=mang[i].gia * mang[i].soluong;
+                tong+=tien;
+            }
+            document.getElementById("tongtien").innerHTML=tong;
+        }
+        function xoatat(){
+            mang.splice(0,mang.length);
+            nap();
+            tongtien();
+        }
+    </script>
+    <title>Giỏ hàng</title>
+</head>
+<body onload="nap()">
+    <header>
+        <div class="inner-header container">
+            <a href="" id="logo">XIGONNEW</a>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="index.html">Trang chủ</a>
+                        <ul>
+                            <li><a href="#">Flash sale</a></li>
+                            <li><a href="#">Mua nhiều nhất</a></li>
+                            <li><a href="#">Free ship</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="introduction.html">Giới thiệu</a></li>
+                    <li><a href="#">Sản phẩm</a>
+                        <ul>
+                            <li><a href="#">Kệ để chén</a></li>
+                            <li><a href="#">Tủ lạnh</a></li>
+                            <li><a href="#">Máy giặt</a></li>
+                            <li><a href="#">Nồi chiên không dầu</a></li>
+                            <li><a href="#">Ấm đun nước</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Góp ý</a></li>
+                    <li><a href="#">Liên hệ</a>
+                        <ul>
+                            <li><a href="#">Điện thoại</a></li>
+                            <li><a href="#">Email</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="subscribe.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="cart container">
+            <h2>GIỎ HÀNG</h2>
+            <table class="part">
+            <tr style="font-weight: bold;">
+                <td style="width: 150px;">Hình ảnh</td>
+                <td style="width: 150px; padding-left: 31px;">Chi tiết</td>
+                <td style="width: 150px;padding-left: 31px;">Giá</td>
+                <td style="width: 100px; text-align: center;">Số lượng</td>
+                <td style="width: 200px; text-align: center; padding-left: 30px;">
+                    Thành tiền
+                </td>
+                <td style="text-align: right; width: 120px;">
+                    Xoá tất <input type="button" value="Xoá" onclick="xoatat()">
+                </td>
+            </tr>
+        </table>
+        <table class="part" border="1" id="table"> 
+        </table>
+                <div class="container">
+                <button class="button1">Tiếp tục mua</button><div class="button2">Tổng tiền: <span id="tongtien"></span></div>
+            </div>
+    </div>
+    <footer>
+        <div id="container">
+                <div class="introduction">
+                    <h3>Giới thiệu :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Shop đồ gia dụng chuyên bán những sản phẩm gia dụng
+                    </p>
+                    <br>
+                    <h3>Địa chỉ :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Đường số 4, Bình Hưng Hoà B, Bình Tân, thành phố Hồ Chí Minh
+                    </p>
+                <ul class="social">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                </div>
+                <div class="link">
+                    <h3>Đường dẫn :</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="introduction.html">Về chúng tôi</a></li>
+                        <li><a href="#">Thông tin liên lạc</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="#">Điều kiện chính sách</a></li>
+                    </ul>
+                </div>
+                <div class="lh">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i> Số điện thoại:</span>
+                            <span>
+                                <li><a href="#">+ 844340821</a></li>
+                                  <li><a href="#">+ 849353520</a></li> 
+                                                         
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope"></i> Email:</span>
+                            <span>
+                                nhandtps36231@fpt.edu.vn
+                            </span>
+                        </li>
+                        <li>
+                            <form action="">
+                                <input type="email" class="email" placeholder="Đăng ký bằng email tại đây"> <br>
+                                <input type="button" class="send" value="Gửi">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+</body>
+</html>

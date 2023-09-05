@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="subscribe.css">
+    <title>Đăng ký</title>
+</head>
+<body style="background-image: url(hinh/dogd1.jpeg); background-repeat: none;background-size: cover;">
+    <header>
+        <div class="inner-header container">
+            <a href="" id="logo">XIGONNEW</a>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="index.html">Trang chủ</a>
+                        <ul>
+                            <li><a href="#">Flash sale</a></li>
+                            <li><a href="#">Mua nhiều nhất</a></li>
+                            <li><a href="#">Free ship</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="introduction.html">Giới thiệu</a></li>
+                    <li><a href="#">Sản phẩm</a>
+                        <ul>
+                            <li><a href="#">Kệ để chén</a></li>
+                            <li><a href="#">Tủ lạnh</a></li>
+                            <li><a href="#">Máy giặt</a></li>
+                            <li><a href="#">Nồi chiên không dầu</a></li>
+                            <li><a href="#">Ấm đun nước</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Góp ý</a></li>
+                    <li><a href="#">Liên hệ</a>
+                        <ul>
+                            <li><a href="#">Điện thoại</a></li>
+                            <li><a href="#">Email</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="subscribe.html"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form action="" class="form" name="f1">
+        <div class="tam"><label class="caption"for="">ĐĂNG KÝ</label></div>
+        <hr>
+        <label for="">Họ và tên:</label>
+        <br>
+        <input class="mot" type="text" placeholder="Nhập họ và tên" name="ten" onkeyup="loi()">
+        <div id="ten"></div>
+        <label for="">Ngày/ tháng/ năm sinh:</label><br>
+        <input  class="nam" type="date" name="ngaysinh" onkeyup="loi1()">
+        <div id="ngaysinh"></div>
+        <fieldset>
+        <legend>Giới tính:</legend>
+        <label class="muoi" for="1"><input type="radio" name="gt" id="1">Nam</label>
+        <label class="muoi" for="2"><input type="radio" name="gt" id="2">Nữ</label>
+        <label class="muoi" for="3"><input type="radio" name="gt" id="3">Khác</label>
+        </fieldset>
+        <div id="gt"></div>
+        <label for="">Email:</label><br>
+        <input class="mot bon"type="text" placeholder="Nhập email" name="email" onkeyup="loi2()">
+        <div id="email"></div>
+        <div class="sau">
+        <label for="">Mật khẩu:</label><br>
+        <input class="mk" type="password" placeholder="Nhập mật khẩu" onkeyup="loi3()" name="pass1">
+        <div id="pass12"></div>
+        <div id="pass1"></div>
+        </div>
+        <div class="bay">
+        <label for="">Xác nhận lại mật khẩu:</label><br>
+        <input class="mk" type="password" placeholder="Nhập lại mật khẩu" onkeyup="loi4()" name="pass2"><br>
+        <div id="pass2"></div>
+        </div>
+        <div class="tam"> <input type="button" value="Đăng ký" name="dk" onclick="checkform(),fValidForm()"><input type="button" value="Đăng nhập" name="dk" ></div>
+    </form>
+    <footer>
+        <div id="container">
+                <div class="introduction">
+                    <h3>Giới thiệu :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Shop đồ gia dụng chuyên bán những sản phẩm gia dụng
+                    </p>
+                    <br>
+                    <h3>Địa chỉ :</h3>
+                    <p>
+                        Công ty TNHH Sài Gòn Mới <br>
+                        Đường số 4, Bình Hưng Hoà B, Bình Tân, thành phố Hồ Chí Minh
+                    </p>
+                <ul class="social">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                </div>
+                <div class="link">
+                    <h3>Đường dẫn :</h3>
+                    <ul>
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Về chúng tôi</a></li>
+                        <li><a href="">Thông tin liên lạc</a></li>
+                        <li><a href="">Dịch vụ</a></li>
+                        <li><a href="">Điều kiện chính sách</a></li>
+                    </ul>
+                </div>
+                <div class="lh">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i> Số điện thoại:</span>
+                            <span>
+                                
+                                    <li><a href="">+ 844340821</a></li>
+                                  <li><a href="">+ 849353520</a></li> 
+                                                         
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope"></i> Email:</span>
+                            <span>
+                                nhandtps36231@fpt.edu.vn
+                            </span>
+                        </li>
+                        <li>
+                            <form action="">
+                                <input type="email" class="email" placeholder="Đăng ký bằng email tại đây"> <br>
+                                <input type="button" class="send" value="Gửi">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
+    <script>
+        function isCheckGT(){
+    let arrGT = document.getElementsByName("gt");
+    for (let i = 0; i< arrGT.length; i++){
+        if(arrGT[i].checked == true){
+            return true;
+        }
+    }
+    return false;
+}
+function fValidForm(){
+    if(isCheckGT()==false){
+        document.getElementById("gt").innerHTML="<span>*</span>Bạn phải chọn giới tính";
+        return;
+    }else{document.getElementById("gt").innerHTML="";}
+}
+    
+        function checkform(){
+            var loi="";
+            if(document.f1.ngaysinh.value==""){
+                loi+="1";
+                document.getElementById("ngaysinh").innerHTML="<span>*</span>Bạn chưa nhập ngày sinh !";
+            }else{document.getElementById("ngaysinh").innerHTML="";}
+            if(document.f1.ten.value==""){
+                loi+="2";
+                document.getElementById("ten").innerHTML="<span>*</span>Bạn chưa nhập tên !";
+            }else{
+            document.getElementById("ten").innerHTML="";}
+            if(document.f1.email.value==""){
+                loi+="3";
+                document.getElementById("email").innerHTML="<span>*</span>Bạn chưa nhập email !";
+            }else{document.getElementById("email").innerHTML="";}
+            if(document.f1.pass1.value != document.f1.pass2.value){
+                loi+="Password không trùng nhau !";
+                document.getElementById("pass12").innerHTML="<span>*</span>Password không trùng nhau !";
+            }else{
+                document.getElementById("pass12").innerHTML="";
+            }
+            if(document.f1.pass1.value==""){
+                loi+="4";
+                document.getElementById("pass1").innerHTML="<span>*</span>Bạn chưa nhập mật khẩu!";
+            }else{document.getElementById("pass1").innerHTML="";}
+            if(document.f1.pass2.value==""){
+                loi+="5";
+                document.getElementById("pass2").innerHTML="<span>*</span>Bạn chưa nhập lại mật khẩu!";
+            }else{document.getElementById("pass2").innerHTML="";}
+            if(loi==""){
+                alert("Bạn đã đăng ký thành công");
+            }
+        }
+        function loi(){
+            if(document.f1.ten.value==""){
+                document.getElementById("ten").innerHTML="<span>*</span>Bạn chưa nhập tên !";
+            }else{
+            document.getElementById("ten").innerHTML="";}
+        }
+        function loi1(){
+            if(document.f1.ngaysinh.value==""){
+                document.getElementById("ngaysinh").innerHTML="<span>*</span>Bạn chưa nhập ngày sinh !";
+            }else{document.getElementById("ngaysinh").innerHTML="";}
+        }
+        function loi2(){
+            if(document.f1.email.value==""){
+                document.getElementById("email").innerHTML="<span>*</span>Bạn chưa nhập email !";
+            }else{document.getElementById("email").innerHTML="";}
+        }
+        function loi3(){
+            if(document.f1.pass1.value==""){
+                document.getElementById("pass1").innerHTML="<span>*</span>Bạn chưa nhập mật khẩu!";
+            }else{document.getElementById("pass1").innerHTML="";}
+        }
+        function loi4(){
+            if(document.f1.pass2.value==""){
+                document.getElementById("pass2").innerHTML="<span>*</span>Bạn chưa nhập lại mật khẩu!";
+            }else{document.getElementById("pass2").innerHTML="";}
+        }
+    </script>
+</body>
+</html>
